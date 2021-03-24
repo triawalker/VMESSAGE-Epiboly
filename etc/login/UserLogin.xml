@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+  <user num="0">
+    <account>806481426</account>
+    <password>jerry2000826</password>
+    <autologin>false</autologin>
+  </user>
+  <user num="1">
+    <account>root</account>
+    <password>jerry2000826</password>
+    <autologin>false</autologin>
+  </user>
+  <user num="2">
+    <account>admin</account>
+    <password>jerry2000826</password>
+    <autologin>false</autologin>
+  </user>
+  <user num="3">
+    <account>11111111</account>
+    <password>111111</password>
+    <autologin>false</autologin>
+  </user>
+  <user num="4">
+    <account>22222222</account>
+    <password>222222</password>
+    <autologin>false</autologin>
+  </user>
+  <user num="5">
+    <account>33333333</account>
+    <password></password>
+    <autologin>false</autologin>
+  </user>
+  <user num="6">
+    <account>55555555</account>
+    <password>555555</password>
+    <autologin>false</autologin>
+  </user>
+  <user num="7">
+    <account>6</account>
+    <password></password>
+    <autologin>false</autologin>
+  </user>
+</users>

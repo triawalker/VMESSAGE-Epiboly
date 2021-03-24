@@ -1,0 +1,10 @@
+com\vmsg\update\thread\UpdateService.class
+com\vmsg\update\window\UpdateWindow.class
+com\vmsg\update\window\UpdateEtcAlterWindow.class
+com\vmsg\update\thread\UpdateThread.class
+com\vmsg\update\thread\UpdateInfoShow.class
+com\vmsg\update\thread\UpdateMonitor.class
+com\vmsg\update\thread\UpdateEtc.class
+com\vmsg\update\thread\MainThread.class
+com\vmsg\update\thread\UpdateEtcThread.class
+com\vmsg\update\thread\UpdateService$GetUpdateServerFiles.class

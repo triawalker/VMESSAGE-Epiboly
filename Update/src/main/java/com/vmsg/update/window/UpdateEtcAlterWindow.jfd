@@ -1,0 +1,120 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "修改配置文件"
+			"font": new java.awt.Font( "微软雅黑", 0, 12 )
+			"minimumSize": new java.awt.Dimension( 416, 249 )
+			"visible": true
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"rows": 4
+			} ) {
+				name: "panel1"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel3"
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "ckbox_flp"
+						"text": "下载到本地路径:"
+						"selected": true
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ckbox_flpActionPerformed", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "North"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txt_flp"
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_flp"
+						"text": "浏     览"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_flpActionPerformed", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "East"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel4"
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "ckbox_host"
+						"text": "服务器IP:(不建议修改)"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ckbox_hostActionPerformed", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "North"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txt_host"
+						"editable": false
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel5"
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "ckbox_port"
+						"text": "服务器端口:(不建议修改)"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ckbox_portActionPerformed", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "North"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txt_port"
+						"editable": false
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel6"
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "ckbox_fsp"
+						"text": "服务器文件地址:(不建议修改)"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ckbox_fspActionPerformed", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "North"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txt_fsp"
+						"editable": false
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btn_save"
+					"text": "保     存"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_saveActionPerformed", true ) )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "East"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 5 )
+			"size": new java.awt.Dimension( 445, 300 )
+		} )
+	}
+}

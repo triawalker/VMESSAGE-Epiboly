@@ -1,0 +1,233 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "com.vmsg.update.window"
+	"i18n.bundleName": "test"
+	"i18n.keyPrefix": "UpdateWindow"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "VMSG更新程序   built by triawalker"
+			"font": new java.awt.Font( "微软雅黑", 0, 12 )
+			"minimumSize": new java.awt.Dimension( 784, 507 )
+			"visible": true
+			"defaultCloseOperation": 3
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panel1"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignOnBaseline": true
+				} ) {
+					name: "panel2"
+					"border": new javax.swing.border.MatteBorder( 1, 0, 1, 1, sfield java.awt.Color black )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_begin"
+						"text": "开     始"
+						"font": new java.awt.Font( "微软雅黑", 0, 12 )
+						"background": sfield java.awt.SystemColor control
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_beginActionPerformed", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "East"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel_info"
+					"border": new javax.swing.border.MatteBorder( 1, 1, 1, 1, sfield java.awt.Color black )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "txt_MainInfo"
+							"editable": false
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 9
+							}
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+						name: "panel3"
+						"border": new javax.swing.border.MatteBorder( 1, 0, 0, 0, sfield java.awt.Color black )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+							name: "panel5"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+								name: "panel6"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "lbl_DownInfo_title"
+									"text": "正在下载:"
+									"font": new java.awt.Font( "微软雅黑", 0, 12 )
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "lbl_DownInfo_content"
+									"font": new java.awt.Font( "微软雅黑", 0, 12 )
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 9
+									}
+								} )
+							}, new FormLayoutConstraints( class java.lang.String ) {
+								"value": "West"
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+								name: "panel7"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "lbl_DownInfo_speed"
+									"font": new java.awt.Font( "微软雅黑", 0, 12 )
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 9
+									}
+								} )
+							}, new FormLayoutConstraints( class java.lang.String ) {
+								"value": "East"
+							} )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "North"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+							name: "panel4"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+								"alignment": 0
+							} ) {
+								name: "panel8"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "lbl_DownInfo_ratetitle"
+									"text": "进度:"
+									"font": new java.awt.Font( "微软雅黑", 0, 12 )
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 9
+									}
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "lbl_DownInfo_ratepic"
+									"font": new java.awt.Font( "微软雅黑", 0, 12 )
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 9
+									}
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "lbl_DownInfo_ratenum"
+									"font": new java.awt.Font( "微软雅黑", 0, 12 )
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 9
+									}
+								} )
+							}, new FormLayoutConstraints( class java.lang.String ) {
+								"value": "Center"
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+								name: "panel9"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "lbl_DownInfo_ratesize"
+									"font": new java.awt.Font( "微软雅黑", 0, 12 )
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 9
+									}
+								}, new FormLayoutConstraints( class java.lang.String ) {
+									"value": "Center"
+								} )
+							}, new FormLayoutConstraints( class java.lang.String ) {
+								"value": "East"
+							} )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "Center"
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "South"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+						name: "panel10"
+						"border": new javax.swing.border.MatteBorder( 0, 0, 1, 0, sfield java.awt.Color black )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+							"alignment": 2
+						} ) {
+							name: "panel11"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "lbl_UpdateInfo_ratesize"
+								"font": new java.awt.Font( "微软雅黑", 0, 12 )
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 9
+								}
+							} )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "East"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+							"alignment": 0
+						} ) {
+							name: "panel12"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "lbl_UpdateInfo_ratetitle"
+								"text": "总进度:"
+								"font": new java.awt.Font( "微软雅黑", 0, 12 )
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "lbl_UpdateInfo_ratepic"
+								"font": new java.awt.Font( "微软雅黑", 0, 12 )
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 9
+								}
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "lbl_UpdateInfo_reatenum"
+								"font": new java.awt.Font( "微软雅黑", 0, 12 )
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 9
+									"JavaCodeGenerator.variableName": "lbl_UpdateInfo_ratenum"
+								}
+							} )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "West"
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "North"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu_etc"
+					"text": "配置文件"
+					"font": new java.awt.Font( "微软雅黑", 0, 12 )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menu_etc_local"
+						"text": "本地生成配置文件"
+						"font": new java.awt.Font( "微软雅黑", 0, 12 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menu_etc_localActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menu_etc_server"
+						"text": "读取服务器更新配置文件"
+						"font": new java.awt.Font( "微软雅黑", 0, 12 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menu_etc_serverActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menu_etc_alter"
+						"text": "修改配置文件"
+						"font": new java.awt.Font( "微软雅黑", 0, 12 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menu_etc_alterActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu_window"
+					"text": "窗口"
+					"font": new java.awt.Font( "微软雅黑", 0, 12 )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menu_window_logclear"
+						"text": "主信息窗口清空"
+						"font": new java.awt.Font( "微软雅黑", 0, 12 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menu_window_logclearActionPerformed", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 635, 465 )
+		} )
+	}
+}

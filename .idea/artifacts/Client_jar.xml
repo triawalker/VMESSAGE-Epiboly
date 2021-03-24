@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact name="Client:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Client_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Client.jar">
+        <element id="module-output" name="Client" />
+        <element id="module-output" name="Data" />
+      </element>
+      <element id="directory" name="libs">
+        <element id="library" level="project" name="JGoodies Forms" />
+        <element id="library" level="project" name="Maven: junit:junit:4.13" />
+      </element>
+    </root>
+  </artifact>
+</component>

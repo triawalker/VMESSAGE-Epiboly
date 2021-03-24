@@ -1,0 +1,141 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "com.vmsg.update.window"
+	"i18n.bundleName": "test"
+	"i18n.keyPrefix": "LoginWindow"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.CardLayout ) ) {
+			name: "this"
+			"title": "VMSG登录系统"
+			"font": new java.awt.Font( "微软雅黑", 0, 12 )
+			"visible": true
+			"minimumSize": new java.awt.Dimension( 486, 327 )
+			"defaultCloseOperation": 3
+			addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "thisKeyReleased", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"rows": 3
+			} ) {
+				name: "panel3"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+					name: "panel4"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel5"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+						"$columnSpecs": "default:grow(0.1), right:default:grow(0.05), default:grow(0.85), default:grow(0.1)"
+						"$rowSpecs": "17dlu:grow(0.4), linegap, default:grow(0.4), linegap, default:grow(0.2)"
+					} ) {
+						name: "panel2"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label2"
+							"text": "账号："
+							"font": new java.awt.Font( "微软雅黑", 0, 12 )
+						}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+							"gridX": 2
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "combox_account"
+							"editable": true
+							"font": new java.awt.Font( "微软雅黑", 0, 12 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "combox_accountItemStateChanged", true ) )
+						}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+							"gridX": 3
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "密码："
+							"font": new java.awt.Font( "微软雅黑", 0, 12 )
+						}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+							"gridX": 2
+							"gridY": 3
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "txt_password"
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "txt_passwordKeyTyped", true ) )
+						}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+							"gridX": 3
+							"gridY": 3
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+							"alignment": 0
+						} ) {
+							name: "panel1"
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "ckbox_savepwd"
+								"text": "记住密码"
+								"font": new java.awt.Font( "微软雅黑", 0, 12 )
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 1
+								}
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox1ActionPerformed", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "ckbox_autologin"
+								"text": "自动登录"
+								"font": new java.awt.Font( "微软雅黑", 0, 12 )
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 1
+								}
+								addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "ckbox_autologinStateChanged", true ) )
+							} )
+						}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+							"gridX": 3
+							"gridY": 5
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel8"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+						"$rowSpecs": "default, linegap, default, linegap, default"
+						"$columnSpecs": "center:default:grow(0.2), default:grow(0.7), center:default:grow(0.1)"
+					} ) {
+						name: "panel9"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btn_login"
+							"text": "登录"
+							"font": new java.awt.Font( "微软雅黑", 0, 12 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_loginActionPerformed", true ) )
+						}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+							"gridX": 2
+							"gridY": 1
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "btn_register"
+							"text": "注册"
+							"font": new java.awt.Font( "微软雅黑", 0, 12 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_registerActionPerformed", true ) )
+						}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+							"gridX": 2
+							"gridY": 3
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "card1"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 65, 100 )
+			"size": new java.awt.Dimension( 475, 325 )
+		} )
+	}
+}

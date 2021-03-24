@@ -1,0 +1,11 @@
+com\vmsg\server\thread\CommandThread.class
+com\vmsg\server\thread\ConsoleInfo.class
+com\vmsg\server\thread\RegisterThread.class
+com\vmsg\server\thread\SQLManage.class
+com\vmsg\server\thread\ClientsThread.class
+com\vmsg\server\thread\TimeThread.class
+com\vmsg\server\thread\HandMsgThread.class
+com\vmsg\server\thread\LoginThread.class
+com\vmsg\server\thread\Client.class
+com\vmsg\server\thread\MainThread.class
+com\vmsg\server\thread\ClientSupplier.class
