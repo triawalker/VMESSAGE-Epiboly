@@ -38,9 +38,9 @@ public class SQLManage {
             throwables.printStackTrace();
         }
     }
-    public void insert2user(String account, String password, String name, String ip, Date registerdate, ObjectOutputStream output){
+    public void insert2user(String account, String password, String name, String ip, Date registerdate, String phone,ObjectOutputStream output){
         Connect();
-        String sql= "INSERT INTO user ( account,password,name,ip,registerdate ) values(?,?,?,?,?)";
+        String sql= "INSERT INTO user ( account,password,name,ip,registerdate,phone ) values(?,?,?,?,?,?)";
         boolean request=false;
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -49,6 +49,7 @@ public class SQLManage {
             statement.setString(3, name);
             statement.setString(4, ip);
             statement.setDate(5, registerdate);
+            statement.setString(6, phone);
             int result=statement.executeUpdate();
             request=true;
         } catch (SQLException throwables) {

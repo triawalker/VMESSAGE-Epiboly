@@ -9,6 +9,7 @@ public class SocketData implements Serializable {
     public Register register;
     public Login login;
     public User user;
+    public PhoneCode phoneCode;
     public boolean connectStatus;
 
     public SocketData(String webip,Msg msg){
@@ -23,6 +24,12 @@ public class SocketData implements Serializable {
         this.webip=webip;
         this.login=login;
     }
+
+    public SocketData(String webip, PhoneCode phoneCode) {
+        this.webip = webip;
+        this.phoneCode = phoneCode;
+    }
+
     public SocketData(User user){
         this.user=user;
     }

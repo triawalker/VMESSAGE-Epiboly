@@ -48,7 +48,7 @@ public class MainThread {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        initConnect(0);// 参数为0s是本地服务器 参数为1是远程服务器 ！！！！注意修改为0
+        initConnect(0);// 参数为0是本地服务器 参数为1是远程服务器 ！！！！注意修改为0
         start();
     }
     public static void start(){

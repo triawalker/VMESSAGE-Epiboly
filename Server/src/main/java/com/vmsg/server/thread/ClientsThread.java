@@ -2,6 +2,7 @@ package com.vmsg.server.thread;
 
 import com.vmsg.SocketData;
 import com.vmsg.User;
+import com.vmsg.server.IMService.com.netease.Controller.PhoneCodeController;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -170,6 +171,7 @@ class ClientSupplier implements Supplier<Boolean> {
     ObjectOutputStream output;
     SocketData socketData;
     User user;
+    String code = null;
 
     LoginThread loginThread;
     RegisterThread registerThread;
@@ -193,10 +195,13 @@ class ClientSupplier implements Supplier<Boolean> {
                     loginThread=new LoginThread(this.socketData,this.output);
                     this.user=loginThread.getLoginUser();
                 }else if(socketData.register!=null){
-                    registerThread=new RegisterThread(this.socketData, this.output);
+                    registerThread=new RegisterThread(this.socketData,this.code, this.output);
                 }else if(socketData.msg!=null){
                     socketData.msg.time = TimeThread.getTime();
                     handMsgThread = new HandMsgThread(ClientsThread.getClientList(), socketData);
+                }else if (socketData.phoneCode!=null){
+                    PhoneCodeController phoneCodeController = new PhoneCodeController(socketData.phoneCode.getPhone());
+                    this.code = phoneCodeController.getCode();
                 }
 
             } catch (ClassNotFoundException e) {

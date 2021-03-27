@@ -13,11 +13,11 @@ new FormModel {
 			"font": new java.awt.Font( "微软雅黑", 0, 12 )
 			"defaultCloseOperation": 2
 			"visible": true
-			"minimumSize": new java.awt.Dimension( 445, 233 )
+			"minimumSize": new java.awt.Dimension( 445, 340 )
 			addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "thisKeyReleased", true ) )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
 				"$columnSpecs": "right:default:grow(0.05), relgap, default:grow(0.9), relgap, default:grow(0.05)"
-				"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
+				"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
 			} ) {
 				name: "panel1"
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -85,11 +85,54 @@ new FormModel {
 					"gridY": 9
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "电话号码："
+					"font": &Font0 new java.awt.Font( "微软雅黑", 0, 12 )
+				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+					"gridX": 1
+					"gridY": 11
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel3"
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txt_phone"
+						"font": &Font1 new java.awt.Font( "微软雅黑", 0, 12 )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_sendCode"
+						"text": "发送验证码"
+						"font": new java.awt.Font( "微软雅黑", 0, 12 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_sendCodeActionPerformed", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "East"
+					} )
+				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+					"gridX": 3
+					"gridY": 11
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "验证码："
+					"font": #Font0
+				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+					"gridX": 1
+					"gridY": 13
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txt_Code"
+					"font": #Font1
+				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+					"gridX": 3
+					"gridY": 13
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "lbl_reginfo"
 					"font": new java.awt.Font( "微软雅黑", 0, 12 )
 				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 					"gridX": 3
-					"gridY": 11
+					"gridY": 15
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
 					"alignment": 2
@@ -102,14 +145,14 @@ new FormModel {
 					} )
 				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 					"gridX": 3
-					"gridY": 13
+					"gridY": 17
 				} )
 			}, new FormLayoutConstraints( class java.lang.String ) {
 				"value": "Center"
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 480, 275 )
+			"size": new java.awt.Dimension( 485, 340 )
 		} )
 	}
 }

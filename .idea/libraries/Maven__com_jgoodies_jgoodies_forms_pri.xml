@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.jgoodies:jgoodies-forms:pri">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../.Maven/repository/com/jgoodies/jgoodies-forms/pri/jgoodies-forms-pri.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../.Maven/repository/com/jgoodies/jgoodies-forms/pri/jgoodies-forms-pri.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../../.Maven/repository/com/jgoodies/jgoodies-forms/pri/jgoodies-forms-pri-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../.Maven/repository/com/jgoodies/jgoodies-forms/pri/jgoodies-forms-pri-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../../.Maven/repository/com/jgoodies/jgoodies-forms/pri/jgoodies-forms-pri-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../.Maven/repository/com/jgoodies/jgoodies-forms/pri/jgoodies-forms-pri-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

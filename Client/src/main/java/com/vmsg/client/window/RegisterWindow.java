@@ -6,11 +6,16 @@ package com.vmsg.client.window;
 
 import com.jgoodies.forms.factories.CC;
 import com.jgoodies.forms.layout.FormLayout;
+import com.vmsg.PhoneCode;
 import com.vmsg.Register;
+import com.vmsg.SocketData;
+import com.vmsg.client.thread.MainThread;
 import com.vmsg.client.thread.RegisterThread;
+import com.vmsg.client.thread.WebIP;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -49,7 +54,7 @@ public class RegisterWindow extends JFrame {
         }
 
         if(flag){
-            register=new Register(txt_name.getText(),txt_account.getText(),txt_password.getText(),false);
+            register=new Register(txt_name.getText(),txt_account.getText(),txt_password.getText(),txt_phone.getText(),txt_Code.getText(),false);
             new RegisterThread(register);
         }else{
             new RegisterThread(sb);
@@ -134,6 +139,13 @@ public class RegisterWindow extends JFrame {
         }
     }
 
+    private void btn_sendCodeActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        PhoneCode phoneCode = new PhoneCode(txt_phone.getText());
+        SocketData socketData = new SocketData(WebIP.getWebip(), phoneCode);
+        MainThread.connect.SendSocketData(socketData);
+    }
+
 
 
 
@@ -148,6 +160,12 @@ public class RegisterWindow extends JFrame {
         txt_password = new JPasswordField();
         label4 = new JLabel();
         txt_password2 = new JPasswordField();
+        label5 = new JLabel();
+        panel3 = new JPanel();
+        txt_phone = new JTextField();
+        btn_sendCode = new JButton();
+        label6 = new JLabel();
+        txt_Code = new JTextField();
         lbl_reginfo = new JLabel();
         panel2 = new JPanel();
         btn_reg = new JButton();
@@ -157,7 +175,7 @@ public class RegisterWindow extends JFrame {
         setFont(new Font("\u5fae\u8f6f\u96c5\u9ed1", Font.PLAIN, 12));
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
-        setMinimumSize(new Dimension(445, 233));
+        setMinimumSize(new Dimension(445, 340));
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
@@ -171,7 +189,7 @@ public class RegisterWindow extends JFrame {
         {
             panel1.setLayout(new FormLayout(
                 "right:default:grow(0.05), $rgap, default:grow(0.9), $rgap, default:grow(0.05)",
-                "6*(default, $lgap), default"));
+                "8*(default, $lgap), default"));
 
             //---- label1 ----
             label1.setText("\u6635\u79f0\uff1a");
@@ -233,9 +251,39 @@ public class RegisterWindow extends JFrame {
             });
             panel1.add(txt_password2, CC.xy(3, 9));
 
+            //---- label5 ----
+            label5.setText("\u7535\u8bdd\u53f7\u7801\uff1a");
+            label5.setFont(new Font("\u5fae\u8f6f\u96c5\u9ed1", Font.PLAIN, 12));
+            panel1.add(label5, CC.xy(1, 11));
+
+            //======== panel3 ========
+            {
+                panel3.setLayout(new BorderLayout());
+
+                //---- txt_phone ----
+                txt_phone.setFont(new Font("\u5fae\u8f6f\u96c5\u9ed1", Font.PLAIN, 12));
+                panel3.add(txt_phone, BorderLayout.CENTER);
+
+                //---- btn_sendCode ----
+                btn_sendCode.setText("\u53d1\u9001\u9a8c\u8bc1\u7801");
+                btn_sendCode.setFont(new Font("\u5fae\u8f6f\u96c5\u9ed1", Font.PLAIN, 12));
+                btn_sendCode.addActionListener(e -> btn_sendCodeActionPerformed(e));
+                panel3.add(btn_sendCode, BorderLayout.EAST);
+            }
+            panel1.add(panel3, CC.xy(3, 11));
+
+            //---- label6 ----
+            label6.setText("\u9a8c\u8bc1\u7801\uff1a");
+            label6.setFont(new Font("\u5fae\u8f6f\u96c5\u9ed1", Font.PLAIN, 12));
+            panel1.add(label6, CC.xy(1, 13));
+
+            //---- txt_Code ----
+            txt_Code.setFont(new Font("\u5fae\u8f6f\u96c5\u9ed1", Font.PLAIN, 12));
+            panel1.add(txt_Code, CC.xy(3, 13));
+
             //---- lbl_reginfo ----
             lbl_reginfo.setFont(new Font("\u5fae\u8f6f\u96c5\u9ed1", Font.PLAIN, 12));
-            panel1.add(lbl_reginfo, CC.xy(3, 11));
+            panel1.add(lbl_reginfo, CC.xy(3, 15));
 
             //======== panel2 ========
             {
@@ -246,7 +294,7 @@ public class RegisterWindow extends JFrame {
                 btn_reg.addActionListener(e -> btn_regActionPerformed());
                 panel2.add(btn_reg);
             }
-            panel1.add(panel2, CC.xy(3, 13));
+            panel1.add(panel2, CC.xy(3, 17));
         }
         contentPane.add(panel1, BorderLayout.CENTER);
         pack();
@@ -264,6 +312,12 @@ public class RegisterWindow extends JFrame {
     private JPasswordField txt_password;
     private JLabel label4;
     private JPasswordField txt_password2;
+    private JLabel label5;
+    private JPanel panel3;
+    private JTextField txt_phone;
+    private JButton btn_sendCode;
+    private JLabel label6;
+    private JTextField txt_Code;
     private JLabel lbl_reginfo;
     private JPanel panel2;
     private JButton btn_reg;
